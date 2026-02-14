@@ -1,0 +1,269 @@
+.vault-page {
+    padding-top: 8px;
+}
+
+/* Hero */
+.vault-hero {
+    padding: 32px 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.vault-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -30%;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, var(--accent-gold-glow), transparent 70%);
+    pointer-events: none;
+}
+
+.vault-hero-icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 12px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-hover));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.vault-balance {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.vault-subtitle {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 2px;
+}
+
+.vault-lock-msg {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 14px;
+    font-size: 0.68rem;
+    color: var(--text-secondary);
+    background: var(--bg-card-alt);
+    padding: 6px 14px;
+    border-radius: var(--radius-full);
+}
+
+.vault-multiplier {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.68rem;
+    color: #27AE60;
+    background: #27AE6018;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: var(--radius-full);
+}
+
+/* Add button */
+.vault-add-btn {
+    margin: 16px 0;
+}
+
+/* Deposit form */
+.vault-deposit {
+    padding: 20px;
+    margin: 16px 0;
+}
+
+.vault-deposit h3 {
+    font-size: 0.95rem;
+    margin-bottom: 14px;
+}
+
+.vault-field {
+    margin-bottom: 14px;
+}
+
+.vault-field label {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.vault-field input,
+.vault-field select {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    background: var(--bg-input);
+    color: var(--text-primary);
+    transition: border-color var(--transition-fast);
+}
+
+.vault-field input:focus,
+.vault-field select:focus {
+    border-color: var(--accent-gold);
+    outline: none;
+}
+
+.vault-unlock-req {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.68rem;
+    color: #E67E22;
+    padding: 8px 12px;
+    background: #E67E2212;
+    border-radius: var(--radius-md);
+    margin-bottom: 14px;
+}
+
+.vault-deposit-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+/* Deposits list */
+.vault-deposits {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.vault-dep {
+    padding: 18px;
+}
+
+.vault-dep-unlockable {
+    border: 1px solid #27AE6044;
+    box-shadow: 0 0 15px #27AE6015;
+}
+
+.vault-dep-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.vault-dep-name {
+    display: block;
+    font-size: 0.88rem;
+}
+
+.vault-dep-status {
+    font-size: 0.62rem;
+    font-weight: 700;
+}
+
+.vault-dep-status.locked {
+    color: #E74C3C;
+}
+
+.vault-dep-status.unlocked {
+    color: #27AE60;
+}
+
+.vault-dep-amount {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--accent-gold);
+}
+
+.vault-dep-progress {
+    height: 6px;
+    background: var(--bg-card-alt);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.vault-dep-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-gold), #27AE60);
+    border-radius: 3px;
+    transition: width 0.5s ease;
+}
+
+.vault-dep-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4px;
+    font-size: 0.62rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.vault-unlock-btn {
+    margin-top: 12px;
+    width: 100%;
+}
+
+/* Empty state */
+.vault-empty {
+    padding: 32px 24px;
+    text-align: center;
+    margin-top: 16px;
+}
+
+.vault-empty-icon {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+}
+
+.vault-empty h3 {
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+}
+
+.vault-empty p {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    max-width: 300px;
+    margin: 0 auto 16px;
+    line-height: 1.5;
+}
+
+.vault-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 280px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.vault-benefit {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    padding: 8px 12px;
+    background: var(--bg-card-alt);
+    border-radius: var(--radius-md);
+}
+
+.vault-benefit svg {
+    color: var(--accent-gold);
+    flex-shrink: 0;
+}

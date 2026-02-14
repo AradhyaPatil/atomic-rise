@@ -1,0 +1,102 @@
+.app-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border-light);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(12px);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header-logo {
+    font-size: 1.3rem;
+}
+
+.header-title {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.header-title .gold {
+    color: var(--accent-gold);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-tier {
+    font-size: 1.2rem;
+}
+
+.header-coins {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: var(--accent-gold-light);
+    padding: 6px 14px;
+    border-radius: var(--radius-full);
+    position: relative;
+    transition: transform var(--transition-fast);
+}
+
+.header-coins:hover {
+    transform: scale(1.05);
+}
+
+.header-coin-icon {
+    font-size: 0.9rem;
+}
+
+.header-coin-count {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--accent-gold-hover);
+    font-variant-numeric: tabular-nums;
+    min-width: 24px;
+}
+
+/* Coin delta animation */
+.coin-delta {
+    position: absolute;
+    top: -18px;
+    right: 4px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    animation: coinFloat 1.2s ease forwards;
+    pointer-events: none;
+}
+
+.coin-plus {
+    color: var(--success);
+}
+
+.coin-minus {
+    color: #E74C3C;
+}
+
+@keyframes coinFloat {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-16px);
+    }
+}

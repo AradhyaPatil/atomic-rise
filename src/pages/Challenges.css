@@ -1,0 +1,161 @@
+.challenges-page {
+    padding-top: 8px;
+    position: relative;
+}
+
+.challenges-page h2 {
+    margin-bottom: 4px;
+}
+
+/* Confetti */
+.confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.confetti-piece {
+    position: absolute;
+    top: -10px;
+    border-radius: 2px;
+    animation: confettiFall 2.5s ease-out forwards;
+}
+
+@keyframes confettiFall {
+    0% {
+        transform: translateY(0) rotateZ(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh) rotateZ(720deg);
+        opacity: 0;
+    }
+}
+
+/* Sections */
+.challenge-section {
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+/* Card */
+.challenge-card {
+    padding: 18px;
+    margin-bottom: 10px;
+}
+
+.challenge-done {
+    opacity: 0.8;
+}
+
+.cc-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.cc-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.cc-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.cc-name {
+    display: block;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+}
+
+.cc-desc {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+.cc-done-badge {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--success);
+    background: var(--success-light);
+    padding: 2px 10px;
+    border-radius: var(--radius-full);
+    white-space: nowrap;
+}
+
+/* Progress */
+.cc-progress {
+    margin-bottom: 12px;
+}
+
+.cc-bar {
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    background: var(--border-light);
+    overflow: hidden;
+    margin-bottom: 6px;
+}
+
+.cc-fill {
+    height: 100%;
+    border-radius: 4px;
+    background: linear-gradient(90deg, var(--accent-gold), var(--accent-gold-hover));
+    transition: width 0.6s ease;
+}
+
+.cc-progress-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+/* Footer */
+.cc-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.cc-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.cc-duration {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.cc-reward {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+}
+
+.cc-reward-earned {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--success);
+}
+
+.cc-actions {
+    display: flex;
+    gap: 6px;
+}

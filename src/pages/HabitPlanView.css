@@ -1,0 +1,347 @@
+.hpv-page {
+    padding-top: 8px;
+}
+
+.hpv-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px 0;
+    margin-bottom: 12px;
+    font-family: var(--font-body);
+    transition: color var(--transition-fast);
+}
+
+.hpv-back:hover {
+    color: var(--accent-gold);
+}
+
+/* Hero */
+.hpv-hero {
+    padding: 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hpv-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -30%;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, var(--accent-gold-glow), transparent 70%);
+    pointer-events: none;
+}
+
+.hpv-title {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.hpv-hero-meta {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+}
+
+.hpv-tag {
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: var(--radius-full);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    background: var(--accent-gold-light);
+    color: var(--accent-gold-hover);
+}
+
+.hpv-current-phase {
+    margin-bottom: 12px;
+}
+
+.hpv-phase-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: var(--radius-full);
+    color: white;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.hpv-phase-progress {
+    height: 6px;
+    background: var(--bg-card-alt);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 4px;
+}
+
+.hpv-phase-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.8s ease;
+}
+
+.hpv-phase-pct {
+    font-size: 0.68rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+/* Stats */
+.hpv-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin: 16px 0;
+}
+
+.hpv-stat {
+    padding: 12px 8px;
+    text-align: center;
+}
+
+.hpv-stat-val {
+    display: block;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--accent-gold);
+}
+
+.hpv-stat-label {
+    font-size: 0.62rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* Rationale */
+.hpv-rationale {
+    padding: 16px;
+}
+
+.hpv-rationale-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    color: var(--accent-gold);
+    font-size: 0.82rem;
+}
+
+.hpv-rationale p {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Phase ladder */
+.hpv-ladder {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.hpv-phase {
+    padding: 14px 16px;
+    transition: all var(--transition-base);
+}
+
+.hpv-phase-active {
+    box-shadow: 0 0 15px var(--accent-gold-glow);
+}
+
+.hpv-phase-done {
+    opacity: 0.7;
+}
+
+.hpv-phase-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.hpv-phase-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hpv-phase-icon {
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+.hpv-phase-name {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-primary);
+}
+
+.hpv-phase-dur {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.hpv-phase-right {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-muted);
+}
+
+.hpv-active-badge {
+    font-size: 0.55rem;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+    background: var(--accent-gold);
+    color: white;
+    letter-spacing: 0.1em;
+}
+
+.hpv-phase-target {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: var(--bg-card-alt);
+    border-radius: var(--radius-md);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.hpv-phase-target svg {
+    color: var(--accent-gold);
+    flex-shrink: 0;
+}
+
+/* Expanded details */
+.hpv-phase-detail {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    animation: fadeIn 0.3s ease;
+}
+
+.hpv-detail-row {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 10px 12px;
+    border-radius: var(--radius-md);
+    background: var(--bg-card-alt);
+}
+
+.hpv-detail-row svg {
+    color: var(--accent-gold);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.hpv-detail-row strong {
+    display: block;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+}
+
+.hpv-detail-row p {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.hpv-detail-warn svg {
+    color: #E67E22;
+}
+
+.hpv-detail-env svg {
+    color: #3498DB;
+}
+
+.hpv-detail-reward {
+    background: var(--accent-gold-light);
+}
+
+.hpv-detail-reward svg {
+    color: var(--accent-gold-hover);
+}
+
+/* Adaptation */
+.hpv-adapt {
+    padding: 16px;
+    margin-top: 16px;
+}
+
+.hpv-adapt-rule {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-light);
+    font-size: 0.76rem;
+    color: var(--text-secondary);
+}
+
+.hpv-adapt-rule:last-child {
+    border-bottom: none;
+}
+
+.hpv-adapt-rule svg {
+    color: #E74C3C;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.hpv-adapt-ok svg {
+    color: var(--accent-gold);
+}
+
+.hpv-adapt-plat svg {
+    color: #3498DB;
+}
+
+/* Break support */
+.hpv-break {
+    padding: 16px;
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+
+.hpv-break p {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 3px 0;
+}
+
+.hpv-break strong {
+    color: var(--text-primary);
+}
+
+.hpv-empty {
+    text-align: center;
+    padding: 60px 24px;
+    color: var(--text-muted);
+}

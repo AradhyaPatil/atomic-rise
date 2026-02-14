@@ -1,0 +1,214 @@
+.rewards-page {
+    padding-top: 8px;
+}
+
+.rewards-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.rewards-header h2 {
+    margin: 0;
+}
+
+.rewards-balance {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--accent-gold-light);
+    padding: 8px 16px;
+    border-radius: var(--radius-full);
+}
+
+.coin-big {
+    font-size: 1.2rem;
+}
+
+.coin-count {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--accent-gold-hover);
+}
+
+.active-boosts {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--accent-gold-hover);
+    animation: pulse 2s infinite;
+}
+
+.active-boosts svg {
+    color: var(--accent-gold);
+}
+
+/* Earn rules */
+.earn-rules {
+    padding: 20px;
+    margin-bottom: 24px;
+}
+
+.earn-rules .section-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.earn-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.earn-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
+}
+
+.earn-icon {
+    font-size: 0.9rem;
+    width: 20px;
+    text-align: center;
+}
+
+.earn-text {
+    flex: 1;
+    color: var(--text-secondary);
+}
+
+.earn-coins {
+    font-weight: 700;
+    color: var(--accent-gold);
+    font-size: 0.78rem;
+}
+
+/* Reward section */
+.reward-section {
+    margin-bottom: 24px;
+}
+
+.reward-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.reward-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+}
+
+.reward-owned {
+    opacity: 0.7;
+}
+
+.reward-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.reward-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.reward-name {
+    display: block;
+    font-weight: 600;
+    font-size: 0.88rem;
+    color: var(--text-primary);
+}
+
+.reward-desc {
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+}
+
+.reward-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+    flex-shrink: 0;
+}
+
+.reward-cost {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+}
+
+.reward-owned-badge {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--success);
+}
+
+.reward-qty {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+/* Badge grid */
+.badge-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.badge-card {
+    text-align: center;
+    padding: 20px 12px;
+    transition: all var(--transition-fast);
+}
+
+.badge-card:hover {
+    transform: translateY(-2px);
+}
+
+.badge-unlocked {
+    border: 1.5px solid var(--accent-gold);
+    box-shadow: 0 0 15px var(--accent-gold-glow);
+}
+
+.badge-big-icon {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.badge-card-name {
+    display: block;
+    font-weight: 700;
+    font-size: 0.82rem;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.badge-card-desc {
+    display: block;
+    font-size: 0.68rem;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+}
+
+.badge-owned-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--success);
+}

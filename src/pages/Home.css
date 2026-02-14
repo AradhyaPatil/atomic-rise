@@ -1,0 +1,263 @@
+.home-page {
+    padding-top: 8px;
+}
+
+/* Hero */
+.home-hero {
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+.home-hero::before {
+    content: '';
+    position: absolute;
+    top: -60%;
+    right: -30%;
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle, var(--accent-gold-glow), transparent 70%);
+    pointer-events: none;
+}
+
+.home-hero-top {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero-score {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    display: block;
+    line-height: 1;
+}
+
+.hero-label {
+    font-size: 0.55rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    font-weight: 700;
+}
+
+.home-hero-info {
+    flex: 1;
+}
+
+.hero-tier {
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+}
+
+.hero-quote {
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    max-width: 220px;
+}
+
+.hero-projection {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+    background: var(--accent-gold-light);
+    padding: 3px 10px;
+    border-radius: var(--radius-full);
+}
+
+/* KPI Strip */
+.home-kpis {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin: 12px 0;
+}
+
+.home-kpi {
+    padding: 14px 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.home-kpi:hover {
+    transform: translateY(-2px);
+}
+
+.kpi-icon {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+}
+
+.kpi-val {
+    display: block;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.kpi-label {
+    font-size: 0.58rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+/* Weekly Strip */
+.home-week {
+    padding: 16px;
+    margin-bottom: 12px;
+}
+
+.home-week-header {
+    margin-bottom: 12px;
+}
+
+.home-week-strip {
+    display: flex;
+    justify-content: space-between;
+    gap: 4px;
+}
+
+.week-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    flex: 1;
+}
+
+.week-day-label {
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+.week-day-dot {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.65rem;
+    font-weight: 700;
+    transition: all var(--transition-fast);
+}
+
+.week-dot-none {
+    background: var(--bg-card-alt);
+    color: transparent;
+}
+
+.week-dot-low {
+    background: #27AE6033;
+    color: #27AE60;
+}
+
+.week-dot-half {
+    background: #27AE6066;
+    color: white;
+}
+
+.week-dot-full {
+    background: #27AE60;
+    color: white;
+}
+
+.week-day-today .week-day-dot {
+    box-shadow: 0 0 0 2px var(--accent-gold), 0 0 10px var(--accent-gold-glow);
+}
+
+.week-day-pct {
+    font-size: 0.55rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+/* Insight */
+.home-insight {
+    display: flex;
+    gap: 12px;
+    padding: 16px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.home-insight:hover {
+    transform: translateY(-1px);
+}
+
+.insight-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--accent-gold-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-gold);
+    flex-shrink: 0;
+}
+
+.insight-content {
+    flex: 1;
+}
+
+.insight-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.insight-text {
+    font-size: 0.8rem;
+    color: var(--text-primary);
+    line-height: 1.4;
+    margin: 0;
+}
+
+.insight-conf {
+    font-size: 0.62rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-top: 4px;
+    display: inline-block;
+}
+
+/* Habits section */
+.home-habits-section {
+    margin-top: 8px;
+}
+
+.home-habits-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.home-habits-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 24px;
+}

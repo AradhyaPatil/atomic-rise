@@ -1,0 +1,328 @@
+.habit-card {
+    padding: 20px;
+    margin-bottom: 12px;
+    transition: all var(--transition-fast);
+    position: relative;
+    overflow: hidden;
+}
+
+.habit-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Gold glow for 7+ day streaks */
+.habit-card-glow {
+    border: 1.5px solid var(--accent-gold);
+    box-shadow: 0 0 20px var(--accent-gold-glow), var(--shadow-md);
+    animation: glowPulse 3s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 15px var(--accent-gold-glow), var(--shadow-md);
+    }
+
+    50% {
+        box-shadow: 0 0 30px var(--accent-gold-glow), var(--shadow-md);
+    }
+}
+
+.habit-card-bad {
+    border-left: 3px solid #E74C3C;
+}
+
+/* Header */
+.hc-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.hc-name {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+}
+
+.hc-badges {
+    display: flex;
+    gap: 6px;
+}
+
+.hc-type-badge {
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.hc-type-badge.good {
+    background: var(--success-light);
+    color: var(--success);
+}
+
+.hc-type-badge.bad {
+    background: #FDEDEC;
+    color: #E74C3C;
+}
+
+.hc-diff-badge {
+    font-size: 0.62rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.hc-diff-easy {
+    background: #E8F8F0;
+    color: #27AE60;
+}
+
+.hc-diff-medium {
+    background: var(--accent-gold-light);
+    color: var(--accent-gold-hover);
+}
+
+.hc-diff-hard {
+    background: #FDEDEC;
+    color: #E74C3C;
+}
+
+.hc-header-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hc-streak {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.hc-streak-icon {
+    font-size: 1rem;
+}
+
+.hc-streak-fire {
+    animation: pulse 1.5s infinite;
+}
+
+.hc-streak-fire .hc-streak-icon {
+    animation: coinBounce 1.5s ease-in-out infinite;
+}
+
+.hc-streak-count {
+    color: var(--accent-gold);
+    font-family: var(--font-heading);
+}
+
+.hc-delete-btn {
+    border: none;
+    background: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 4px;
+    border-radius: var(--radius-sm);
+    transition: color var(--transition-fast);
+}
+
+.hc-delete-btn:hover {
+    color: #E74C3C;
+}
+
+/* 7-Day grid */
+.hc-week-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+    margin-bottom: 14px;
+}
+
+.hc-day {
+    text-align: center;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.hc-day:hover {
+    transform: scale(1.1);
+}
+
+.hc-day-label {
+    display: block;
+    font-size: 0.6rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.hc-day-today .hc-day-label {
+    color: var(--accent-gold);
+}
+
+.hc-day-check {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-fast);
+}
+
+.hc-day-done .hc-day-check {
+    background: var(--accent-gold);
+    color: white;
+    animation: checkPop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes checkPop {
+    0% {
+        transform: scale(0.5);
+    }
+
+    60% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.hc-day-today .hc-day-check {
+    border: 2px solid var(--accent-gold);
+}
+
+.hc-day-missed .hc-day-check {
+    background: var(--bg-card-alt);
+}
+
+.hc-day-empty {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--border-light);
+}
+
+.hc-checkmark {
+    animation: checkPop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Progress */
+.hc-progress-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.hc-progress-bar {
+    flex: 1;
+    height: 6px;
+    border-radius: 3px;
+    background: var(--border-light);
+    overflow: hidden;
+}
+
+.hc-progress-fill {
+    height: 100%;
+    border-radius: 3px;
+    background: linear-gradient(90deg, var(--accent-gold), var(--accent-gold-hover));
+    transition: width 0.6s ease;
+}
+
+.hc-progress-text {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    white-space: nowrap;
+}
+
+/* Footer */
+.hc-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hc-coin-info {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.hc-coin-icon {
+    font-size: 0.85rem;
+}
+
+.hc-coin-amount {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--accent-gold);
+}
+
+.hc-actions {
+    display: flex;
+    gap: 6px;
+}
+
+.hc-skip-btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+    border: 1.5px solid var(--accent-gold);
+    background: var(--accent-gold-light);
+    color: var(--accent-gold-hover);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.hc-skip-btn:hover {
+    background: var(--accent-gold);
+    color: white;
+}
+
+/* Replacement */
+.hc-replacement {
+    margin-top: 10px;
+    padding: 10px 14px;
+    border-radius: var(--radius-md);
+    background: var(--bg-card-alt);
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+}
+
+.hc-replacement strong {
+    color: var(--text-primary);
+}
+
+/* Plan arrow */
+.hc-plan-arrow {
+    color: var(--text-muted);
+    transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.hc-header:hover .hc-plan-arrow {
+    color: var(--accent-gold);
+    transform: translateX(2px);
+}

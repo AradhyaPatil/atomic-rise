@@ -1,0 +1,119 @@
+.checkin-page {
+    padding-top: 8px;
+}
+
+.checkin-page h2 {
+    margin-bottom: 4px;
+}
+
+.checkin-form {
+    margin-top: 16px;
+    padding: 24px;
+    position: relative;
+}
+
+.checkin-saved-badge {
+    background: var(--success-light);
+    color: var(--success);
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 10px 16px;
+    border-radius: var(--radius-md);
+    margin-bottom: 20px;
+    text-align: center;
+    animation: scaleIn 0.3s ease;
+}
+
+/* Mood selector */
+.mood-selector {
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+}
+
+.mood-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 12px 10px;
+    border-radius: var(--radius-md);
+    border: 2px solid var(--border-light);
+    background: var(--bg-card-alt);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    flex: 1;
+}
+
+.mood-btn:hover {
+    border-color: var(--accent-gold);
+}
+
+.mood-active {
+    border-color: var(--accent-gold);
+    background: var(--accent-gold-light);
+    box-shadow: 0 2px 8px var(--accent-gold-glow);
+}
+
+.mood-emoji {
+    font-size: 1.5rem;
+}
+
+.mood-label {
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.mood-active .mood-label {
+    color: var(--accent-gold-hover);
+}
+
+/* History */
+.checkin-history {
+    margin-top: 28px;
+}
+
+.checkin-history-item {
+    margin-bottom: 10px;
+    padding: 16px;
+}
+
+.chi-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.chi-date {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.chi-mood {
+    font-size: 1.2rem;
+}
+
+.chi-identity {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--accent-gold);
+    margin-bottom: 6px;
+}
+
+.chi-journal {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 6px;
+}
+
+.chi-improved {
+    font-size: 0.78rem;
+    font-weight: 600;
+}

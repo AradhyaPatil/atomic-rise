@@ -1,0 +1,258 @@
+.analytics-page {
+    padding-top: 8px;
+}
+
+/* KPI Grid */
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.kpi-card {
+    padding: 14px 8px;
+    text-align: center;
+    position: relative;
+}
+
+.kpi-card-wide {
+    grid-column: span 2;
+}
+
+.kpi-icon-sm {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+.kpi-value {
+    display: block;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--text-primary);
+}
+
+.kpi-name {
+    font-size: 0.58rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.kpi-trend {
+    font-size: 0.75rem;
+}
+
+/* Heatmap */
+.heatmap-section {
+    padding: 16px;
+    margin-bottom: 14px;
+}
+
+.heatmap-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.heatmap-tabs {
+    display: flex;
+    gap: 4px;
+}
+
+.heatmap-tab {
+    font-size: 0.68rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    background: var(--bg-card-alt);
+    border: none;
+    cursor: pointer;
+    color: var(--text-muted);
+    font-family: var(--font-body);
+    transition: all var(--transition-fast);
+}
+
+.heatmap-tab.active {
+    background: var(--accent-gold);
+    color: white;
+}
+
+.heatmap-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 3px;
+}
+
+.heatmap-cell {
+    aspect-ratio: 1;
+    border-radius: 3px;
+    cursor: default;
+    transition: background 0.2s ease;
+}
+
+.heatmap-cell:hover {
+    opacity: 0.8;
+    transform: scale(1.15);
+}
+
+.heatmap-legend {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 10px;
+    justify-content: flex-end;
+}
+
+.heatmap-legend-label {
+    font-size: 0.55rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.heatmap-legend-cell {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+}
+
+/* Analytics cards */
+.analytics-card {
+    padding: 18px;
+    margin-bottom: 12px;
+}
+
+/* Consistency list */
+.consistency-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.consistency-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.cons-info {
+    display: flex;
+    flex-direction: column;
+    min-width: 80px;
+    flex-shrink: 0;
+}
+
+.cons-name {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.cons-cat {
+    font-size: 0.6rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.cons-bar-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+}
+
+.cons-bar {
+    flex: 1;
+    height: 6px;
+    background: var(--bg-card-alt);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.cons-bar-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.5s ease;
+}
+
+.cons-pct {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    min-width: 32px;
+    text-align: right;
+}
+
+/* Insights */
+.insights-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.insight-item {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    background: var(--bg-card-alt);
+    border-radius: var(--radius-md);
+}
+
+.insight-emoji {
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.insight-body {
+    flex: 1;
+}
+
+.insight-body p {
+    font-size: 0.78rem;
+    color: var(--text-primary);
+    line-height: 1.4;
+    margin: 0;
+}
+
+.insight-conf-bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 6px;
+    height: 4px;
+    background: var(--bg-card-alt);
+    border-radius: 2px;
+    position: relative;
+}
+
+.insight-conf-fill {
+    height: 100%;
+    background: var(--accent-gold);
+    border-radius: 2px;
+}
+
+.insight-conf-bar span {
+    font-size: 0.58rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    white-space: nowrap;
+    position: absolute;
+    right: 0;
+    top: -14px;
+}
+
+.corr-conf {
+    font-size: 0.6rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-top: 4px;
+    display: inline-block;
+}

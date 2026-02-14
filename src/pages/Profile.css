@@ -1,0 +1,160 @@
+.profile-page {
+    padding-top: 8px;
+}
+
+/* Hero */
+.profile-hero {
+    text-align: center;
+    padding: 32px 24px;
+    margin-bottom: 16px;
+}
+
+.profile-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-hover));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 auto 12px;
+    box-shadow: var(--shadow-gold);
+}
+
+.profile-name {
+    margin-bottom: 4px;
+}
+
+.profile-tier {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+}
+
+.profile-tagline {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.profile-stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.pstat {
+    text-align: center;
+}
+
+.pstat-value {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.pstat-label {
+    font-size: 0.65rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+}
+
+.pstat-divider {
+    width: 1px;
+    height: 32px;
+    background: var(--border-light);
+}
+
+/* Badges */
+.profile-badges {
+    margin-bottom: 16px;
+    padding: 20px;
+}
+
+.badges-row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.badge-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.badge-emoji {
+    font-size: 1.8rem;
+}
+
+.badge-name {
+    font-size: 0.65rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+    text-align: center;
+    max-width: 64px;
+}
+
+/* Menu */
+.profile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.profile-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px;
+    cursor: pointer;
+    border: none;
+    text-align: left;
+    font-family: var(--font-body);
+    width: 100%;
+    transition: all var(--transition-fast);
+}
+
+.profile-menu-item:hover {
+    transform: translateX(4px);
+}
+
+.pmi-icon {
+    color: var(--accent-gold);
+    flex-shrink: 0;
+}
+
+.pmi-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.pmi-label {
+    font-weight: 600;
+    font-size: 0.92rem;
+    color: var(--text-primary);
+}
+
+.pmi-desc {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+}
+
+.pmi-arrow {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
